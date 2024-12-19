@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Radio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu superior -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo do player de rádio -->
+    <div class="radio-container">
+        <div class="radio-body">
+            <div class="radio-header">
+                <h2>Country Radio</h2>
+            </div>
+
+            <!-- Elemento de áudio escondido -->
+            <audio id="audioPlayer" hidden>
+                <source id="audioSource" src="music1.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento <code>audio</code>.
+            </audio>
+
+            <!-- Controles Personalizados -->
+            <div class="controls">
+                <button id="prevBtn">◀◀</button>
+                <button id="playPauseBtn">▶</button>
+                <button id="nextBtn">▶▶</button>
+                <button id="loopBtn">🚫</button>
+            </div>
+
+            <!-- Controle de Volume -->
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+
+            <!-- Playlist -->
+            <div class="playlist">
+                <ul id="playlist">
+                    <li data-src="1.mp3">Música 1</li>
+                    <li data-src="2.mp3">Música 2</li>
+                    <li data-src="3.mp3">Música 3</li>
+                    <li data-src="4.mp3">Música 4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
